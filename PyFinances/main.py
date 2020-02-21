@@ -38,12 +38,15 @@ for i in range(len(Profits_Losses)-1):
 
 
 ## Here I am finding the Max and Min of the range in differences and using their indexes locate there dates' locations:
-
+##Index of the max and min first
 index_increase = range_of_differences.index(max(range_of_differences))
 index_decrease = range_of_differences.index(min(range_of_differences))
+
+## Corresponding name with each value found prior:
 Greatest_Decrease_In_Profits = Date[index_decrease+1]
 Greatest_Increase_In_Profits = Date[index_increase+1]
 #print(range_of_differences)
+
 average_change = total_diff/(len(Profits_Losses)-1)
 #print(round(average_change,2))
 
