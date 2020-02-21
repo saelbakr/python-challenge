@@ -53,7 +53,7 @@ output_path = os.path.join("Financial_Analysis_Summary.csv")
 with open(output_path, 'w') as datafile:
 
     # Initialize csv.writer
-    csvwriter = csv.writer(datafile)
+    csvwriter = csv.writer(datafile, delimiter=",")
 
     
     csvwriter.writerow(["FINANCIAL ANALYSIS:"])
