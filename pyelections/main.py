@@ -61,7 +61,7 @@ print(f'Second Advancing Candidate: {Candidate_Second_Advance}: {max(second_max)
 full_summary = []
 for name in cd_names:
     full_summary.append(f'{name}, {percentage[name]}%, ({total_votes[name]} votes)')
-    full_summary.sort()``
+    full_summary.sort()
 
 for final in full_summary:
     print(f'{final}')
@@ -78,9 +78,10 @@ with open(output_path, 'w') as datafile:
     csvwriter.writerow(["Total Votes:"])
     csvwriter.writerow([f'{len(VoterID)} votes'])
 
-    csvwriter.writerow(["---------------------"])
+    csvwriter.writerow(["--------------------------------------"])
 
     csvwriter.writerows(all_info)
+    csvwriter.writerow(["---------------------------------------"])
 
     csvwriter.writerow(["First Advancing Candidate: " f'{Candidate_to_Advance} ({max(integer)} votes)'])
     csvwriter.writerow(["Second Advancing Candidate: " f'{Candidate_Second_Advance} ({max(second_max)} votes)'])
